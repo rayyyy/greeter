@@ -1,5 +1,5 @@
-const GreeterContract = artifacts.require("Greeter");
+const GreeterContract = artifacts.require('Greeter')
 
 module.exports = function (deployer) {
-  deployer.deploy(GreeterContract);
-};
+  deployer.deploy(GreeterContract)
+}
