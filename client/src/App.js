@@ -49,10 +49,12 @@ class App extends Component {
 
   formSubmitHandler = async () => {
     const { accounts, contract, greeting } = this.state;
-    const updatedGreeting = await contract.methods.setGreeting(greeting).send({from: accounts[0]});
+    const updatedGreeting = await contract.methods.setGreeting(greeting).send({ from: accounts[0] });
   }
 
+
   render() {
+    console.log(this.state.web3);
     if (!this.state.web3) {
       return <div>Loading Web3, accounts, and contract...</div>;
     }
